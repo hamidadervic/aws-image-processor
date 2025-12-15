@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /* height: 100vh; */
+    font-family: "Inter", "Poppins", sans-serif;
+    background: linear-gradient(135deg, #1e0039, #3C005A, #550080);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

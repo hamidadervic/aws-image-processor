@@ -1,0 +1,64 @@
+.upload-container__rows {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* AI generated */
+.resize-btn {
+    font-weight: 400;
+    padding: 0.8em 2em;
+    border-radius: 35px;
+    letter-spacing: 0.5px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: linear-gradient(135deg, rgba(120, 0, 255, 0.25), rgba(200, 0, 255, 0.1));
+    border: 1px solid rgba(200, 0, 255, 0.4);
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(150, 0, 255, 0.2);
+}
+
+.resize-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: 0.8s;
+}
+
+.resize-btn:hover::before {
+    left: 100%;
+}
+
+.resize-btn:hover {
+    box-shadow: 0 0 25px rgba(160, 0, 255, 0.4);
+    transform: translateY(-3px);
+}
+
+.glass-loader {
+  width: 35px;
+  height: 35px;
+  border: 4px solid rgba(255, 255, 255, 0.15);
+  border-top: 4px solid rgba(200, 100, 255, 0.8);
+  border-radius: 50%;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.05);
+  animation: spin 1s linear infinite;
+  box-shadow: 0 0 20px rgba(150, 0, 255, 0.3);
+  margin-left: 10px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

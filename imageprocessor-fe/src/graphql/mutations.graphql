@@ -1,0 +1,9 @@
+# this is an auto generated file. This will be overwritten
+
+mutation PublishImageResized($imageName: String!, $base64Data: String!) {
+  publishImageResized(imageName: $imageName, base64Data: $base64Data) {
+    imageName
+    base64Data
+    __typename
+  }
+}

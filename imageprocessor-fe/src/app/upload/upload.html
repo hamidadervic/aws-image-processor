@@ -1,0 +1,9 @@
+<div class="upload-container__rows">
+  <input type="file" id="fileInput" (change)="upload($event)" hidden>
+  <label for="fileInput" class="resize-btn">
+    Upload
+  </label>
+  @if (subs && !subs.closed) {
+  <div class="glass-loader"></div>
+  }
+</div>

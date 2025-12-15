@@ -1,0 +1,9 @@
+<main class="main">
+  <div class="content">
+    <app-upload></app-upload>
+    @if(imageSrc()) {
+    <img style="margin-top: 10px;" [src]="imageSrc()" />
+    }
+  </div>
+</main>
+<router-outlet />

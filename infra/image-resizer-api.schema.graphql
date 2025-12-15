@@ -1,0 +1,17 @@
+type Image {
+	imageName: String!
+	base64Data: String!
+}
+
+type Mutation {
+	publishImageResized(imageName: String!, base64Data: String!): Image
+}
+
+type Query {
+	dummy: String
+}
+
+type Subscription {
+	imageResized: Image
+		@aws_subscribe(mutations: ["publishImageResized"])
+}

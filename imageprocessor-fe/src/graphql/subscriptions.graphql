@@ -1,0 +1,9 @@
+# this is an auto generated file. This will be overwritten
+
+subscription ImageResized {
+  imageResized {
+    imageName
+    base64Data
+    __typename
+  }
+}
