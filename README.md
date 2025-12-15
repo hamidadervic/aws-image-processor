@@ -42,3 +42,8 @@ This project is a **fully serverless, event-driven architecture** built on AWS. 
 - Real-time client updates via **AppSync subscriptions**  
 
 ---
+
+![Serverless Image Processing Architecture Live](awsimageprocessorlive.mp4)  
+*Figure 2: Serverless, event-driven image processing live.*
+
+---
