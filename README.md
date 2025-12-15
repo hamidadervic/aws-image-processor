@@ -14,16 +14,16 @@ This project is a **fully serverless, event-driven architecture** built on AWS. 
 
 ## Workflow
 
-1. A client, built with **Angular**, uploads an image by sending a request to **Amazon API Gateway**.  
-2. API Gateway invokes an **AWS Lambda** function (written in **Java**) that generates a **pre-signed S3 URL** for secure image upload.  
-3. The client uploads the image directly to the **source S3 bucket** using the pre-signed URL.  
+1. The client, built with **Angular**, first sends a request to **Amazon API Gateway** to obtain a **pre-signed S3 URL** for uploading an image.  
+2. API Gateway invokes an **AWS Lambda** function (written in **Java**) that generates the pre-signed URL for the **S3 source bucket**.  
+3. Once the client receives the pre-signed URL, it safely uploads the image directly to the **source S3 bucket**.  
 4. The **S3 ObjectCreated event** triggers a second **AWS Lambda** function, which:
    - Resizes the image  
    - Stores the processed image in a **destination S3 bucket**  
 5. The upload of the resized image triggers another **S3 ObjectCreated event**, invoking a third **AWS Lambda** function that:
    - Extracts and stores image metadata in **Amazon DynamoDB**  
    - Publishes the update to **AWS AppSync** using a GraphQL mutation  
-6. Since the client is continuously subscribed to **AppSync**, it automatically receives the notification and the newly resized image metadata in real time.  
+6. Since the client is continuously subscribed to **AppSync**, it automatically receives the notification and the newly resized image metadata in real time. 
 
 ---
 
